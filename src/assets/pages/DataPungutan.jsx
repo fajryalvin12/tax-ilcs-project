@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import PageTitle from "../components/PageTitle";
 import Menu from "../components/Menu";
 import SelectMenu from "../components/SelectMenu";
+import { GiCycle } from "react-icons/gi";
 
 const DataPungutan = () => {
   return (
@@ -50,7 +51,9 @@ const DataPungutan = () => {
                           placeholder="17.639.000"
                           className="input input-bordered w-full"
                         />
-                        <button>Kurs</button>
+                        <button>
+                          <GiCycle />
+                        </button>
                       </div>
                     </div>
                   </div>

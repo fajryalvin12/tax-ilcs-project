@@ -1,10 +1,31 @@
-import React from "react";
 import Navbar from "../components/Navbar";
 import PageTitle from "../components/PageTitle";
 import Menu from "../components/Menu";
 import SelectMenu from "../components/SelectMenu";
+import axios from "axios";
+import { useEffect, React, useState } from "react";
 
 const DataUtama = () => {
+  const [data, setData] = useState({});
+
+  const link =
+    "https://api-hub.ilcs.co.id/test/v2/dataUtama?nomor_pengajuan=20120B388FAE20240402000001";
+
+  async function fetchData() {
+    try {
+      const response = await axios.get(link);
+      const results = response.data.data;
+      console.log(results);
+      setData(results);
+    } catch {
+      console.error("Belum nyambung");
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -17,7 +38,7 @@ const DataUtama = () => {
               <div className="flex justify-between items-center font-semibold p-4">
                 <div className="text-2xl">Data Pemberitahuan</div>
                 <div className="flex gap-4">
-                  <div>No Pengajuan : 20120B388FAE20240402000001</div>
+                  <div>No Pengajuan : {data.nomor_pengajuan}</div>
                   <div>KSWP : VALID</div>
                   <div>Jenis API : 02</div>
                 </div>
@@ -32,6 +53,7 @@ const DataUtama = () => {
                         type="text"
                         placeholder="Free on Board"
                         className="input input-bordered w-full"
+                        defaultValue={data.nomor_pengajuan}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -40,6 +62,7 @@ const DataUtama = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.tanggal_pengajuan}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -48,6 +71,7 @@ const DataUtama = () => {
                         type="text"
                         placeholder="17.639.000"
                         className="input input-bordered w-full"
+                        defaultValue={data.nomor_pendaftaran}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -66,6 +90,7 @@ const DataUtama = () => {
                         type="text"
                         placeholder="Free on Board"
                         className="input input-bordered w-full"
+                        defaultValue={data.ur_pabean_asal}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -82,6 +107,7 @@ const DataUtama = () => {
                         type="text"
                         placeholder="Biasa"
                         className="input input-bordered w-full"
+                        defaultValue={data.ur_jenis_pib}
                       />
                     </div>
                   </div>
@@ -92,6 +118,7 @@ const DataUtama = () => {
                         type="text"
                         placeholder="Free on Board"
                         className="input input-bordered w-full"
+                        defaultValue={data.ur_jenis_impor}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -100,6 +127,7 @@ const DataUtama = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.ur_cara_bayar}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -108,6 +136,7 @@ const DataUtama = () => {
                         type="text"
                         placeholder="Biasa"
                         className="input input-bordered w-full"
+                        defaultValue={data.ur_transaksi_impor}
                       />
                     </div>
                   </div>
