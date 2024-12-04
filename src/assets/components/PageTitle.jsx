@@ -1,4 +1,5 @@
 import React from "react";
+import { FaAngleLeft, FaHome } from "react-icons/fa";
 
 const PageTitle = () => {
   return (
@@ -6,14 +7,18 @@ const PageTitle = () => {
       <div className="flex justify-between items-center px-4 py-2 text-blue-900 font-semibold">
         <div>/Beranda/SSM QC</div>
         <div className="flex gap-4">
-          <div className="flex gap-4">
-            <div>icon3</div>
+          <button className="flex gap-4 items-center">
+            <div>
+              <FaAngleLeft />
+            </div>
             <div>Beranda Permohonan</div>
-          </div>
-          <div className="flex gap-4">
-            <div>icon4</div>
+          </button>
+          <button className="flex gap-4 items-center">
+            <div>
+              <FaHome />
+            </div>
             <div>Beranda Menu</div>
-          </div>
+          </button>
         </div>
       </div>
     </>
