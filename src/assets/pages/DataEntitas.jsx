@@ -1,10 +1,31 @@
-import React from "react";
+import { useEffect, React, useState } from "react";
 import Navbar from "../components/Navbar";
 import PageTitle from "../components/PageTitle";
 import Menu from "../components/Menu";
 import SelectMenu from "../components/SelectMenu";
+import axios from "axios";
 
 const DataEntitas = () => {
+  const [data, setData] = useState({});
+
+  const link =
+    "https://api-hub.ilcs.co.id/test/v2/dataEntitas?id_aju=04eb6a72-bb63-5aed-5e92-f58a3bfd5da2";
+
+  async function fetchData() {
+    try {
+      const response = await axios.get(link);
+      const results = response.data.data.pengusaha;
+      console.log(results);
+      setData(results);
+    } catch {
+      console.error("Belum nyambung");
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -44,6 +65,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="Free on Board"
                             className="input input-bordered w-full"
+                            defaultValue={data.ur_jenis_identitas}
                           />
                         </div>
                         <div className="w-full flex flex-col gap-2">
@@ -52,6 +74,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="Euro"
                             className="input input-bordered w-full"
+                            defaultValue={data.nib}
                           />
                         </div>
                         <div className="w-full flex flex-col gap-2">
@@ -60,6 +83,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="17.639.000"
                             className="input input-bordered w-full"
+                            defaultValue={data.nomor_identitas}
                           />
                         </div>
                       </div>
@@ -68,7 +92,7 @@ const DataEntitas = () => {
                           <div>Nomor Identitas (16 Digit)</div>
                           <input
                             type="text"
-                            placeholder="Free on Board"
+                            placeholder="Nomor Identitas (16 Digit)"
                             className="input input-bordered w-full"
                           />
                         </div>
@@ -78,6 +102,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="Euro"
                             className="input input-bordered w-full"
+                            defaultValue={data.nama_identitas}
                           />
                         </div>
                       </div>
@@ -88,6 +113,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="Free on Board"
                             className="input input-bordered w-full"
+                            defaultValue={data.provinsi_identitas}
                           />
                         </div>
                         <div className="w-full flex flex-col gap-2">
@@ -96,6 +122,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="Euro"
                             className="input input-bordered w-full"
+                            defaultValue={data.kota_identitas}
                           />
                         </div>
                         <div className="w-full flex flex-col gap-2">
@@ -104,6 +131,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="Euro"
                             className="input input-bordered w-full"
+                            defaultValue={data.kecamatan}
                           />
                         </div>
                         <div className="w-full flex flex-col gap-2">
@@ -112,6 +140,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="Euro"
                             className="input input-bordered w-full"
+                            defaultValue={data.kode_pos}
                           />
                         </div>
                         <div className="w-full flex flex-col gap-2">
@@ -120,6 +149,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="Euro"
                             className="input input-bordered w-full"
+                            defaultValue={data.rt_rw}
                           />
                         </div>
                       </div>
@@ -130,6 +160,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="Free on Board"
                             className="input input-bordered w-full"
+                            defaultValue={data.tlp_identitas}
                           />
                         </div>
                         <div className="w-full flex flex-col gap-2">
@@ -138,6 +169,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="Euro"
                             className="input input-bordered w-full"
+                            defaultValue={data.email_identitas}
                           />
                         </div>
                         <div className="w-full flex flex-col gap-2">
@@ -146,6 +178,7 @@ const DataEntitas = () => {
                             type="text"
                             placeholder="17.639.000"
                             className="input input-bordered w-full"
+                            defaultValue={data.status}
                           />
                         </div>
                       </div>
