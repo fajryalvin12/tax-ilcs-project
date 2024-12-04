@@ -1,11 +1,32 @@
-import React from "react";
+import { useEffect, React, useState } from "react";
 import Navbar from "../components/Navbar";
 import PageTitle from "../components/PageTitle";
 import Menu from "../components/Menu";
 import SelectMenu from "../components/SelectMenu";
 import { GiCycle } from "react-icons/gi";
+import axios from "axios";
 
 const DataPungutan = () => {
+  const [data, setData] = useState({});
+
+  const link =
+    "https://api-hub.ilcs.co.id/test/v2/dataPungutan?id_aju=04eb6a72-bb63-5aed-5e92-f58a3bfd5da2";
+
+  async function fetchData() {
+    try {
+      const response = await axios.get(link);
+      const results = response.data.data;
+      console.log(results);
+      setData(results);
+    } catch {
+      console.error("Belum nyambung");
+    }
+  }
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -33,6 +54,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Free on Board"
                         className="input input-bordered w-full"
+                        defaultValue={data.ur_incoterm}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -41,6 +63,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.ur_valuta}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -50,6 +73,7 @@ const DataPungutan = () => {
                           type="text"
                           placeholder="17.639.000"
                           className="input input-bordered w-full"
+                          defaultValue={data.nilai_kurs}
                         />
                         <button>
                           <GiCycle />
@@ -64,6 +88,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Free on Board"
                         className="input input-bordered w-full"
+                        defaultValue={data.nilai_incoterm}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -72,6 +97,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.biaya_tambahan}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -80,6 +106,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.biaya_pengurang}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -88,6 +115,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.tarif_vd}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -96,6 +124,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.fob}
                       />
                     </div>
                   </div>
@@ -106,6 +135,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Free on Board"
                         className="input input-bordered w-full"
+                        defaultValue={data.ur_asuransi}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -114,6 +144,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.nilai_asuransi}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -122,6 +153,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="17.639.000"
                         className="input input-bordered w-full"
+                        defaultValue={data.freight}
                       />
                     </div>
                   </div>
@@ -132,6 +164,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Free on Board"
                         className="input input-bordered w-full"
+                        defaultValue={data.nilai_pabean}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -140,6 +173,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.nilai_pabean_idr}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -148,6 +182,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.berat_kotor}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -156,6 +191,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.berat_bersih}
                       />
                     </div>
                     <div className="w-full flex flex-col gap-2">
@@ -164,6 +200,7 @@ const DataPungutan = () => {
                         type="text"
                         placeholder="Euro"
                         className="input input-bordered w-full"
+                        defaultValue={data.ur_flag_curah}
                       />
                     </div>
                   </div>
