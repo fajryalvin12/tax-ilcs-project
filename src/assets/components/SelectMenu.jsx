@@ -1,19 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SelectMenu = () => {
+  const navigate = useNavigate();
+
+  async function clickHome() {
+    navigate("/");
+  }
+  async function clickEntity() {
+    navigate("/entity");
+  }
+  async function clickGain() {
+    navigate("/gain");
+  }
   return (
     <>
       <div className="flex gap-2">
-        <button>
-          <Link to={"/"}>Data Utama</Link>
-        </button>
-        <button>
-          <Link to={"entity"}>Data Entitas</Link>
-        </button>
-        <button>
-          <Link to={"gain"}>Data Pungutan</Link>
-        </button>
+        <button onClick={clickHome}>Data Utama</button>
+        <button onClick={clickEntity}>Data Entitas</button>
+        <button onClick={clickGain}>Data Pungutan</button>
       </div>
     </>
   );

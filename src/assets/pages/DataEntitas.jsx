@@ -25,108 +25,132 @@ const DataEntitas = () => {
               <div className="p-4 flex flex-col gap-4">
                 <SelectMenu />
                 <div className="flex flex-col gap-4 border">
-                  <div className="p-4">
-                    <div className="font-semibold">Jenis Pemberitahuan</div>
-                    <input
-                      type="text"
-                      placeholder="Pengusaha"
-                      className="input input-bordered w-full max-w-xs"
-                    />
+                  <div className="flex flex-col gap-2 border">
+                    <div className="p-4">
+                      <div className="font-semibold">Jenis Pemberitahuan</div>
+                      <input
+                        type="text"
+                        placeholder="Pengusaha"
+                        className="input input-bordered w-full max-w-xs"
+                      />
+                    </div>
+                    <hr />
+                    <div>
+                      <h1 className="ml-4 text-2xl font-semibold">Pengusaha</h1>
+                      <div className="flex gap-10 p-4 font-semibold w-full items-center justify-center">
+                        <div className="w-full flex flex-col gap-2">
+                          <div>Jenis Identitas</div>
+                          <input
+                            type="text"
+                            placeholder="Free on Board"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                        <div className="w-full flex flex-col gap-2">
+                          <div>NIB</div>
+                          <input
+                            type="text"
+                            placeholder="Euro"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                        <div className="w-full flex flex-col gap-2">
+                          <div>No Identitas</div>
+                          <input
+                            type="text"
+                            placeholder="17.639.000"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex gap-10 p-4 font-semibold w-full items-center justify-center">
+                        <div className="w-1/3 flex flex-col gap-2">
+                          <div>Nomor Identitas (16 Digit)</div>
+                          <input
+                            type="text"
+                            placeholder="Free on Board"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                        <div className="w-2/3 flex flex-col gap-2">
+                          <div>Nama Perusahaan</div>
+                          <input
+                            type="text"
+                            placeholder="Euro"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex gap-10 p-4 font-semibold w-full items-center justify-center">
+                        <div className="w-full flex flex-col gap-2">
+                          <div>Provinsi</div>
+                          <input
+                            type="text"
+                            placeholder="Free on Board"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                        <div className="w-full flex flex-col gap-2">
+                          <div>Kabupaten/Kota</div>
+                          <input
+                            type="text"
+                            placeholder="Euro"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                        <div className="w-full flex flex-col gap-2">
+                          <div>Kecamatan</div>
+                          <input
+                            type="text"
+                            placeholder="Euro"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                        <div className="w-full flex flex-col gap-2">
+                          <div>Kode Pos</div>
+                          <input
+                            type="text"
+                            placeholder="Euro"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                        <div className="w-full flex flex-col gap-2">
+                          <div>RT / RW</div>
+                          <input
+                            type="text"
+                            placeholder="Euro"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex gap-10 p-4 font-semibold w-full items-center justify-center">
+                        <div className="w-full flex flex-col gap-2">
+                          <div>Telephone</div>
+                          <input
+                            type="text"
+                            placeholder="Free on Board"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                        <div className="w-full flex flex-col gap-2">
+                          <div>Email</div>
+                          <input
+                            type="text"
+                            placeholder="Euro"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                        <div className="w-full flex flex-col gap-2">
+                          <div>Status</div>
+                          <input
+                            type="text"
+                            placeholder="17.639.000"
+                            className="input input-bordered w-full"
+                          />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex justify-between w-full p-4">
-                    <div>
-                      <div>Nomor Pengajuan</div>
-                      <input
-                        type="text"
-                        placeholder="20120B388FAE20240402000001"
-                        className="input input-bordered w-full max-w-xs"
-                      />
-                    </div>
-                    <div>
-                      <div>Tanggal Pengajuan</div>
-                      <input
-                        type="text"
-                        placeholder="02-04-2024"
-                        className="input input-bordered w-full max-w-xs"
-                      />
-                    </div>
-                    <div>
-                      <div>Nomor Pendaftaran</div>
-                      <input
-                        type="text"
-                        placeholder="Nomor Pendaftaran"
-                        className="input input-bordered w-full max-w-xs"
-                      />
-                    </div>
-                    <div>
-                      <div>Tanggal Pendaftaran</div>
-                      <input
-                        type="text"
-                        placeholder="Tanggal Pendaftaran"
-                        className="input input-bordered w-full max-w-xs"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex justify-between  p-4">
-                    <div>
-                      <div>Kantor Pabean</div>
-                      <input
-                        type="text"
-                        placeholder="KPU TANJUNG PRIOK"
-                        className="input input-bordered w-full max-w-xs"
-                      />
-                    </div>
-                    <div>
-                      <div>SKEP Fasilitas</div>
-                      <input
-                        type="text"
-                        placeholder="02-04-2024"
-                        className="input input-bordered w-full max-w-xs"
-                      />
-                    </div>
-                    <div>
-                      <div>Jenis PIB</div>
-                      <input
-                        type="text"
-                        placeholder="Biasa"
-                        className="input input-bordered w-full max-w-xs"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex justify-between  p-4">
-                    <div>
-                      <div>Jenis Impor</div>
-                      <input
-                        type="text"
-                        placeholder="UNTUK DIPAKAI"
-                        className="input input-bordered w-full max-w-xs"
-                      />
-                    </div>
-                    <div>
-                      <div>Cara Pembayaran</div>
-                      <input
-                        type="text"
-                        placeholder="BIASA/TUNAI"
-                        className="input input-bordered w-full max-w-xs"
-                      />
-                    </div>
-                    <div>
-                      <div>Transaksi</div>
-                      <input
-                        type="text"
-                        placeholder="Transaksi Perdagangan dengan Imbal Dagang"
-                        className="input input-bordered w-full max-w-xs"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="flex justify-center gap-2 mt-4">
-                  <button className="btn btn-outline btn-primary">
-                    Sebelumnya
-                  </button>
-                  <button className="btn btn-outline btn-primary">
-                    Selanjutnya
-                  </button>
                 </div>
               </div>
             </div>

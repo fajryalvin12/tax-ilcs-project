@@ -25,89 +25,89 @@ const DataUtama = () => {
               <div className="p-4 flex flex-col gap-4">
                 <SelectMenu />
                 <div className="flex flex-col gap-2 border">
-                  <div className="flex w-full p-4 gap-4 justify-between">
-                    <div>
-                      <div className="font-semibold">Nomor Pengajuan</div>
+                  <div className="flex gap-10 p-4 font-semibold w-full items-center justify-center">
+                    <div className="w-full flex flex-col gap-2">
+                      <div>Nomor Pengajuan</div>
                       <input
                         type="text"
-                        placeholder="20120B388FAE20240402000001"
-                        className="input input-bordered w-full min-w-[325px]"
+                        placeholder="Free on Board"
+                        className="input input-bordered w-full"
                       />
                     </div>
-                    <div>
-                      <div className="font-semibold">Tanggal Pengajuan</div>
+                    <div className="w-full flex flex-col gap-2">
+                      <div>Tanggal Pengajuan</div>
                       <input
                         type="text"
-                        placeholder="02-04-2024"
-                        className="input input-bordered w-full min-w-[325px]"
+                        placeholder="Euro"
+                        className="input input-bordered w-full"
                       />
                     </div>
-                    <div>
-                      <div className="font-semibold">Nomor Pendaftaran</div>
+                    <div className="w-full flex flex-col gap-2">
+                      <div>Nomor Pendaftaran</div>
                       <input
                         type="text"
-                        placeholder="Nomor Pendaftaran"
-                        className="input input-bordered w-full min-w-[325px]"
+                        placeholder="17.639.000"
+                        className="input input-bordered w-full"
                       />
                     </div>
-                    <div>
-                      <div className="font-semibold">Tanggal Pendaftaran</div>
+                    <div className="w-full flex flex-col gap-2">
+                      <div>Tanggal Pendaftaran</div>
                       <input
                         type="text"
-                        placeholder="Tanggal Pendaftaran"
-                        className="input input-bordered w-full min-w-[325px]"
+                        placeholder="17.639.000"
+                        className="input input-bordered w-full"
                       />
                     </div>
                   </div>
-                  <div className="flex justify-between  p-4">
-                    <div>
-                      <div className="font-semibold">Kantor Pabean</div>
+                  <div className="flex gap-10 p-4 font-semibold w-full items-center justify-center">
+                    <div className="w-full flex flex-col gap-2">
+                      <div>Kantor Pabean</div>
                       <input
                         type="text"
-                        placeholder="KPU TANJUNG PRIOK"
-                        className="input input-bordered w-full min-w-[450px]"
+                        placeholder="Free on Board"
+                        className="input input-bordered w-full"
                       />
                     </div>
-                    <div>
-                      <div className="font-semibold">SKEP Fasilitas</div>
+                    <div className="w-full flex flex-col gap-2">
+                      <div>SKEP Fasilitas</div>
                       <input
                         type="text"
-                        placeholder="02-04-2024"
-                        className="input input-bordered w-full min-w-[450px]"
+                        placeholder="Euro"
+                        className="input input-bordered w-full"
                       />
                     </div>
-                    <div>
-                      <div className="font-semibold">Jenis PIB</div>
+                    <div className="w-full flex flex-col gap-2">
+                      <div>Jenis PIB</div>
                       <input
                         type="text"
                         placeholder="Biasa"
-                        className="input input-bordered w-full min-w-[450px]"
+                        className="input input-bordered w-full"
                       />
                     </div>
                   </div>
-                  <div className="flex justify-between p-4">
-                    <div>
-                      <div className="font-semibold">Jenis Impor</div>
+                  <div className="flex gap-10 p-4 font-semibold w-full items-center justify-center">
+                    <div className="w-full flex flex-col gap-2">
+                      <div>Jenis Impor</div>
                       <input
                         type="text"
-                        placeholder="UNTUK DIPAKAI"
-                        className="input input-bordered w-full min-w-[450px]"
+                        placeholder="Free on Board"
+                        className="input input-bordered w-full"
                       />
                     </div>
-                    <div>
-                      <div className="font-semibold">Cara Pembayaran</div>
+                    <div className="w-full flex flex-col gap-2">
+                      <div>Cara Pembayaran</div>
                       <input
                         type="text"
-                        placeholder="BIASA/TUNAI"
-                        className="input input-bordered w-full min-w-[450px]"
+                        placeholder="Euro"
+                        className="input input-bordered w-full"
                       />
                     </div>
-                    <div>
-                      <div className="font-semibold">Transaksi</div>
+                    <div className="w-full flex flex-col gap-2">
+                      <div>Transaksi</div>
                       <input
                         type="text"
-                        placeholder="Transaksi Perdagangan dengan Imbal Dagang"
-                        className="input input-bordered w-full min-w-[450px]"
+                        placeholder="Biasa"
+                        className="input input-bordered w-full"
                       />
                     </div>
                   </div>
